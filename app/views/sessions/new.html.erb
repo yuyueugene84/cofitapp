@@ -1,5 +1,6 @@
-<br>
-<div class='well col-md-8'>
+<%= render '/shared/content_title', title: 'Log In'%>
+<hr>
+<div class='well col-md-6'>
 
   <%= form_tag '/login' do %>
     <div class='form-group'>
@@ -10,6 +11,6 @@
       <%= label_tag :password %>
       <%= password_field_tag :password, params[:password] || '', class: "form-control" %>
     </div>
-    <%= submit_tag 'Login', class: 'btn btn-success' %>
+    <%= submit_tag 'Login', class: 'btn btn-primary' %>
   <% end %>
 </div>

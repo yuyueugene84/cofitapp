@@ -16,82 +16,108 @@
 
 @import "bootstrap";
 
-.container {
-  //margin-left: 135px
+.row {
+  margin-left: 20px
 }
 
 body {
   padding-top: 50px;
 }
 
-.navbar {
-  //margin-left: -50px;
-  //*position: relative;
-  font-size: 15px;
-  padding-left: 0px;
-  background-color: #0B486B;
-  color: #FFFFFF;
-}
-
-.navbar .nav > li > a.brand {
-  //padding-left: 0px;
-  //font-size: 20px;
-  //padding-left: 10px;
-  padding-left: 10px;
-}
-
-#navbrand {
-  margin-left: -30px;
-  background-color: #0B486B;
-  color: #ffffff;
-}
-
-#navitem {
-  background-color: #0B486B;
-  color: #FFFFFF;
-}
-
-#navbar {
-  color: #FFFFFF;
-}
-
-#post_rows {
-   //height: 250px;
-//   float: left;
- }
-
 .navbar-brand {
-  font-size: 30px;
-  color: #FFFFFF;
-  //font-family: Vivaldi, Cursive;
-  font-weight: bold;
+  font-size: 25px;
+}
+
+#custom_footer {
+
+  position:fixed;
+  height:100px;
+  bottom:0px;
+  left:75px;
+  right:75px;
+  margin-bottom:0px;
+}
+
+#navileft
+{
+  margin-left: 75px;
+}
+
+#naviright
+{
+  margin-right: 75px;
+  font-size: 20px;
 
 }
 
-
-#post_form {
-  display: inline-block;
-  text-align: center;
-}
-
-
-#table_container {
-  //background-color: #00FFFF;
-  height: 730px;
-  overflow: scroll;
-}
-
-
-
-
-.grid-post {
-  //background-color: #000000;
-  min-height: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 2px;
-  padding: 10px;
-  //border-style: solid;
-  //border-color: grey;
-}
+// .navbar {
+//   //margin-left: -50px;
+//   //*position: relative;
+//   font-size: 15px;
+//   padding-left: 0px;
+//   background-color: #0B486B;
+//   color: #FFFFFF;
+// }
+//
+// .navbar .nav > li > a.brand {
+//   //padding-left: 0px;
+//   //font-size: 20px;
+//   //padding-left: 10px;
+//   padding-left: 10px;
+// }
+//
+// #navbrand {
+//   margin-left: -30px;
+//   background-color: #0B486B;
+//   color: #ffffff;
+// }
+//
+// #navitem {
+//   background-color: #0B486B;
+//   color: #FFFFFF;
+// }
+//
+// #navbar {
+//   color: #FFFFFF;
+// }
+//
+// #post_rows {
+//    //height: 250px;
+// //   float: left;
+//  }
+//
+// .navbar-brand {
+//   font-size: 30px;
+//   color: #FFFFFF;
+//   //font-family: Vivaldi, Cursive;
+//   font-weight: bold;
+//
+// }
+//
+//
+// #post_form {
+//   display: inline-block;
+//   text-align: center;
+// }
+//
+//
+// #table_container {
+//   //background-color: #00FFFF;
+//   height: 730px;
+//   overflow: scroll;
+// }
+//
+//
+//
+//
+// .grid-post {
+//   //background-color: #000000;
+//   min-height: 20px;
+//   margin-bottom: 20px;
+//   margin-left: 20px;
+//   margin-right: 20px;
+//   border-radius: 2px;
+//   padding: 10px;
+//   //border-style: solid;
+//   //border-color: grey;
+// }
