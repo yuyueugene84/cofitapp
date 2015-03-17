@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   #root 'welcome#index'
 
   root 'sessions#new'
+  #root 'users#index'
 
   resources :users, only: [:index, :show, :create, :edit, :update]
 

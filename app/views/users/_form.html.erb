@@ -1,26 +1,41 @@
-<div class="col-md-6 well">
+<div class="col-md-6 well" ng-app="CofitApp">
 
-  <%= form_for @user do |f| %>
+  <%= form_for @user, id: "LoginForm", html: { name: "LoginForm", "novalidate" => true } do |f| %>
 
-  <div class="form-group">
+  <div class="form-group" ng-class="{ 'has-error':LoginForm['user[username]'].$invalid }">
     <%= f.label :username %>
-    <%= f.text_field :username, class: "form-control" %>
+    <%= f.text_field :username, class: "form-control", "ng-model" => "username", required: true, "ng-minlength" => "5" %>
+    <span class="help-block" ng-show="LoginForm['user[username]'].$error.required">
+      *Required
+    </span>
+    <span class="help-block" ng-show="LoginForm['user[username]'].$error.minlength">
+      User name must have at least 5 characters
+    </span>
   </div>
 
-  <div class="form-group">
+  <div class="form-group" ng-class="{ 'has-error':LoginForm['user[email]'].$invalid }">
     <%= f.label :email %>
     <br>
-    <%= f.text_field :email, class: "form-control" %>
+    <%= f.text_field :email, class: "form-control", "ng-model" => "email", required: true %>
+    <span class="help-block" ng-show="LoginForm['user[email]'].$error.required">
+      *Required
+    </span>
   </div>
 
-  <div class="form-group">
+  <div class="form-group" ng-class="{ 'has-error':LoginForm['user[password]'].$invalid }">
     <%= f.label :password %>
-    <%= f.text_field :password, class: "form-control"%>
+    <%= f.text_field :password, class: "form-control", "ng-model" => "password", required: true, "ng-minlength" => "7"%>
+    <span class="help-block" ng-show="LoginForm['user[password]'].$error.required">
+      *Required
+    </span>
+    <span class="help-block" ng-show="LoginForm['user[password]'].$error.minlength">
+      User name must have at least 7 characters
+    </span>
   </div>
 
   <br>
 
-  <%= f.submit(@user.new_record? ? 'Register' : 'Update Profile', class: 'btn btn-primary') %>
+  <%= f.submit(@user.new_record? ? 'Register' : 'Update Profile', class: 'btn btn-primary', "ng-disabled" => "LoginForm.$invalid") %>
 
   <% end %>
 

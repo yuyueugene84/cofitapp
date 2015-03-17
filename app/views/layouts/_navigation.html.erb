@@ -2,7 +2,11 @@
   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
     <span class="sr-only">Toggle navigation</span>
   </button>
-  <%= link_to "CofitApp", root_path, :class => 'navbar-brand' %>
+  <% if logged_in? %>
+    <%= link_to "CofitApp", users_path, :class => 'navbar-brand' %>
+  <% else %>
+    <%= link_to "CofitApp", root_path, :class => 'navbar-brand' %>
+  <% end%>
 </div>
 
 <div class="collapse navbar-collapse">
@@ -11,7 +15,7 @@
 
   <% if logged_in? %>
       <li class="dropdown">
-        <%= link_to('', class: 'btn btn-small dropdown-toggle', 'data-toggle' => 'dropdown') do %>
+        <%= link_to('', class: 'btn btn-large dropdown-toggle', 'data-toggle' => 'dropdown') do %>
           <%= current_user.username %>
           <span class='caret'></span>
         <% end %>
