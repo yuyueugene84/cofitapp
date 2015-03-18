@@ -11,31 +11,29 @@ CofitApp = angular.module("CofitApp", [
   'CofitCtrl'
 ]);
 
-// CofitApp.config([
-//   '$stateProvider',
-//   '$httpProvider',
-//   '$routeProvider',
-//
-// function($stateProvider, $routeProvider, $httpProvider)
-//
-// {
-//   var headers = $httpProvider.defaults.headers.common;
-//
-//   headers['X-CSRF-TOKEN'] = document.querySelector("meta[name=csrf-token]").content;
-//   headers.defaults.headers.common.Accept = "application/json";
-//   headers['X-Requested-With'] = 'XMLHttpRequest';
-//
-//   $routeProvider.
-//       when('/users', {
-//         templateUrl: '/views/users/index.html',
-//         controller: 'CofitCtrl'
-//       }).
-//       when('/users/:id', {
-//         templateUrl: '/views/users/show.html',
-//         controller: 'CofitUserCtrl'
-//       }).
-//       otherwise({
-//         redirectTo: '/users'
-//       });
-//
-// }]);
+CofitApp.config([
+
+  '$httpProvider',
+
+function($httpProvider){
+  var headers = $httpProvider.defaults.headers.common;
+
+  headers['X-CSRF-TOKEN'] = document.querySelector("meta[name=csrf-token]").content;
+  //headers.defaults.headers.common.Accept = "application/json";
+  $httpProvider.defaults.headers.common.Accept = "application/json";
+  //headers['X-Requested-With'] = 'XMLHttpRequest';
+
+  // $routeProvider.
+  //     when('/users', {
+  //       templateUrl: '/views/users/index.html',
+  //       controller: 'CofitCtrl'
+  //     }).
+  //     when('/users/:id', {
+  //       templateUrl: '/views/users/show.html',
+  //       controller: 'CofitUserCtrl'
+  //     }).
+  //     otherwise({
+  //       redirectTo: '/users'
+  //     });
+
+}]);

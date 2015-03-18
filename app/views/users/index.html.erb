@@ -1,8 +1,9 @@
-<%= render 'shared/content_title', title: 'Welcome to Cofit!'%>
+<%= render 'shared/content_title', title: 'Welcome!'%>
 <hr>
 <%= render 'shared/error_messages', postit_object: @user %>
 
 
-<div ng-app="CofitApp" ng-controller="CofitCtrl" ng-init="url=<%= @url.to_json%>; getUser()">
-  <h1>Welcome to Cofit!!! {{user.username}}</h1>
+<div ng-app="CofitApp" ng-controller="CofitCtrl" ng-init="getUser">
+  <h1>Welcome to Cofit, <%= @user.username%>!</h1>
+  {{user.username}}
 </div>

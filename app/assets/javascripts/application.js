@@ -15,6 +15,8 @@
 
 //= require bootstrap
 //= require angular.min
+
 //= require angular-application
 //= require angular-ui-router
+
 //= require_tree .
