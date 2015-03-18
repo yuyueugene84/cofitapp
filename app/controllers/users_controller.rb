@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  respond_to :json
+  #respond_to :json
 
   before_action :set_user, only: [:show, :edit, :update]
   before_action :require_same_user, only: [:edit, :update]
@@ -23,7 +23,11 @@ class UsersController < ApplicationController
   end
 
   def new
-    respond_with @user = User.new
+    @user = User.new
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: @user }
+    # end
   end
 
   def create
