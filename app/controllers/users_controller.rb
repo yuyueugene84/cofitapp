@@ -1,17 +1,29 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:index, :show, :edit, :update]
+  respond_to :json
+
+  before_action :set_user, only: [:show, :edit, :update]
   before_action :require_same_user, only: [:edit, :update]
 
   def index
     #binding.pry
     @user = User.find_by id: current_user.id
+
+    respond_to do |format|
+      format.html {
+        @url = {
+          users: users_path
+        }
+      }
+      format.json { render json: @user }
+    end
+
   end
 
   def show
   end
 
   def new
-    @user = User.new
+    respond_with @user = User.new
   end
 
   def create

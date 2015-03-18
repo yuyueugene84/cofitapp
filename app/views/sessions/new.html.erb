@@ -1,9 +1,10 @@
 <%= render '/shared/content_title', title: 'Log In'%>
 <hr>
-<div class='well col-md-6'>
+
+<div class="col-md-6 well">
 
   <%= form_tag '/login' do %>
-    <div class='form-group'>
+    <div class='form-group' ng-class="{ 'has-error':LoginForm['user[email]'].$invalid }">
       <%= label_tag :email %>
       <%= email_field_tag :email, params[:email] || '', class: "form-control" %>
     </div>

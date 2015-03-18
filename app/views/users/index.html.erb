@@ -2,4 +2,7 @@
 <hr>
 <%= render 'shared/error_messages', postit_object: @user %>
 
-<h1>Welcome to Cofit!!!</h1>
+
+<div ng-app="CofitApp" ng-controller="CofitCtrl" ng-init="url=<%= @url.to_json%>; getUser()">
+  <h1>Welcome to Cofit!!! {{user.username}}</h1>
+</div>
