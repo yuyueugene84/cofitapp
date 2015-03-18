@@ -25,17 +25,17 @@ function($stateProvider, $routeProvider, $httpProvider)
   headers.defaults.headers.common.Accept = "application/json";
   headers['X-Requested-With'] = 'XMLHttpRequest';
 
-  $routeProvider.
-      when('/users', {
-        templateUrl: '/views/users/index.html',
-        controller: 'CofitCtrl'
-      }).
-      when('/users/:id', {
-        templateUrl: '/views/users/show.html',
-        controller: 'CofitUserCtrl'
-      }).
-      otherwise({
-        redirectTo: '/users'
-      });
+  // $routeProvider.
+  //     when('/users', {
+  //       templateUrl: '/views/users/index.html',
+  //       controller: 'CofitCtrl'
+  //     }).
+  //     when('/users/:id', {
+  //       templateUrl: '/views/users/show.html',
+  //       controller: 'CofitUserCtrl'
+  //     }).
+  //     otherwise({
+  //       redirectTo: '/users'
+  //     });
 
 }]);
